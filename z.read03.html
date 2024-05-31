@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cssread/z.read01.css">
+    <link rel="icon" href="img/bookred.svg">
+    <title> | LibroTeach</title>
+</head>
+<body>
+    <header id="header">
+        <nav>
+        </nav>
+    </header>
+    <!--  -->
+    <div class="banner-card">
+        <div class="card">
+        <!-- <embed src="filebook/MODUL PERTEMUAN 2.pdf#toolbar=0" height="1000" width="1000" type=""> -->
+            <iframe id="pdf" src="a_filebook/2018-10-01_Tinkle_Double_Digest.pdf" frameborder="0" width="100%" height="950px"></iframe>
+        </div>
+    </div>
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        window.onscroll = function() {
+            const currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                document.querySelector("header").style.top = "0";
+            } else {
+                document.querySelector("header").style.top = "-50px";
+            }
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
+</body>
+</html>
